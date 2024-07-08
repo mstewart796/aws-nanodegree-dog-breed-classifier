@@ -92,21 +92,21 @@ def adjust_results4_isadog(results_dic, dogfile):
             line = in_file.readline()
 
     # Add to whether pet labels & classifier labels are dogs by appending
-    for key in results_dic:
+    for value in results_dic.values():
         # Pet Image Label IS of Dog
-        if results_dic[key][0] in dognames_dic:
+        if value[0] in dognames_dic:
             # Classifier Label IS image of Dog          
-            if results_dic[key][1] in dognames_dic:
-                results_dic[key].extend((1, 1))
+            if value[1] in dognames_dic:
+                value.extend((1, 1))
             else: 
                 # Classifier Label IS NOT image of dog                              
-                results_dic[key].extend((1, 0))
+                value.extend((1, 0))
         # Pet Image Label IS NOT a Dog
         else:
             # Classifier Label IS image of Dog 
-            if results_dic[key][1] in dognames_dic:
-                results_dic[key].extend((0, 1))
+            if value[1] in dognames_dic:
+                value.extend((0, 1))
             else: 
                 # Classifier Label IS NOT image of dog                              
-                results_dic[key].extend((0, 0))          
+                value.extend((0, 0))          
 
