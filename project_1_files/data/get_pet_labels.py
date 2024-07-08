@@ -47,29 +47,23 @@ def get_pet_labels(image_dir):
     results_dic = dict()
 
     # Process each file, extracting words that contain the pet image label
-    for idx in range(0, len(in_files), 1):
+    for filename in in_files:
         # Skip files that start with .
-        if in_files[idx][0] != '.':
-            # Create temp pet_label var to hold extracted name
-            pet_label = ""
+        if filename[0] != '.':
             # Set label to lower case:
-            lower_in_files = in_files[idx].lower()
+            lower_in_files = filename.lower()
             # Split through _
             word_list_in_files = lower_in_files.split("_")
-            # Loop through the labels, ignore non-alpha chars
-            for word in word_list_in_files:
-                if word.isalpha():
-                    pet_label += word + " "
-            # Remove whitespace
-            pet_label = pet_label.strip()
+            # Extract labels using list comprehension
+            pet_label = " ".join([word.strip() for word in word_list_in_files if word.isalpha()])           
 
             # If filename doesn't exist - add it
-            if in_files[idx] not in results_dic:
-                results_dic[in_files[idx]] = [pet_label]
+            if filename not in results_dic:
+                results_dic[filename] = [pet_label]
             # Else warning
             else:
                 print("** Warning: Duplicate files exist in directory:", 
-                     in_files[idx])
+                     filename)
     
     
     # Replace None with the results_dic dictionary that you created with this
