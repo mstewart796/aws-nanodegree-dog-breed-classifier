@@ -82,7 +82,7 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_correct_breed'] = 0
     
     # Process theough results dict
-    for value in results_dic:
+    for value in results_dic.values():
         # Labels Match Exactly
         if value[2] == 1:
             results_stats_dic['n_match'] += 1

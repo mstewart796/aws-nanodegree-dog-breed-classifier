@@ -22,6 +22,7 @@
 ##
 # Imports classifier function for using CNN to classify images 
 from classifier import classifier 
+import os.path
 
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function. 
@@ -66,11 +67,11 @@ def classify_images(images_dir, results_dic, model):
            None - results_dic is mutable data type so no return needed.         
     """
     # Process all files in the results_dic
-    for key in results_dic:
+    for key, value in results_dic.items():
         # Create model label string
         model_label = ""
         # Create image path
-        full_path = images_dir + key
+        full_path = os.path.join(images_dir, key)
         # Use classifier 
         model_label = classifier(full_path, model)
         # Make lower case
@@ -84,7 +85,7 @@ def classify_images(images_dir, results_dic, model):
         # Iterate through to check for match
         # Match extends a 1
         if truth in model_label:
-            results_dic[key].extend([model_label] + [1])
+            value.extend([model_label] + [1])
         # Otherwise extend a 0
         else:
-            results_dic[key].extend([model_label] + [0])
+            value.extend([model_label] + [0])
