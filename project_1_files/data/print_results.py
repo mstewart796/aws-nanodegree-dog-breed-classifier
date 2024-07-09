@@ -91,9 +91,9 @@ def print_results(results_dic, results_stats_dic, model,
             # OR 
             # Pet label is-NOT-a-dog and classifier label is-a-dog
             if (results_dic[key][3] == 1 and results_dic[key][4] == 0):                 
-                print(f'Pet Label: {results_dic[key][0]} Classifier Label: {results_dic[key][1]} ')
+                print(f'Real: {results_dic[key][0]:>26}  Classifier Label: {results_dic[key][1]:>30} ')
             elif (results_dic[key][3] == 0 and results_dic[key][4] == 1):
-                print(f'Pet Label: {results_dic[key][0]} Classifier Label: {results_dic[key][1]} ')
+                print(f'Real: {results_dic[key][0]:>26}  Classifier Label: {results_dic[key][1]:>30} ')
 
     # IF print_incorrect_breed == True AND there were dogs whose breeds 
     # were incorrectly classified - print out these cases
