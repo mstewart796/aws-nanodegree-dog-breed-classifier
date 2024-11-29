@@ -11,7 +11,9 @@ This is an image classifier created as part of my AWS AI Nanodegree program to c
 - Results gathered and analysis saved to file
 - Three models tested: alexnet, resnet and vgg
 
+## How to use
 
+The .py files are to be found in the *data* folder.
 
 
 
