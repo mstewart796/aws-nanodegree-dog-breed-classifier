@@ -56,7 +56,7 @@ The program uses several Python scripts located in the **`data`** folder.
 ## **Notes**
 
 - Ensure Python is installed and set up correctly in your environment.  
-- This project requires some libraries like `torch` and `PIL`. Refer to the **Udacity Nanodegree documentation** for the required dependencies.
+- This project requires some libraries like `torch` and `PIL`.
 
 ---
 
