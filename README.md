@@ -1,7 +1,7 @@
 
 # Image Classification for a City Dog Show
 
-This is an image classifier created as part of my AWS AI Nanodegree program to classify dogs and non-dogs, and within that dog breeds.
+This is an image classifier created as part of my AWS AI Nanodegree program to classify dogs and non-dogs, and within that dog breeds. It is a command line program made up of various .py files which can be found in the *data* folder.
 
 
 ## Funcionalities
@@ -13,7 +13,7 @@ This is an image classifier created as part of my AWS AI Nanodegree program to c
 
 ## How to use
 
-The .py files are to be found in the *data* folder.
+Place the images you would like to categorize in the *data\uploaded_images* folder (you may delete my personal images that I used) then run one of the following three command lines (make sure you are in the *data* folder in your terminal!):
 
 
 
