@@ -1,7 +1,3 @@
-Here's a polished and improved version of your README file with better formatting, consistent style, and enhancements for readability and professionalism:
-
----
-
 # **Image Classification for a City Dog Show**
 
 This project is part of my **AWS AI Nanodegree Program**. It is a command-line image classifier that can:
