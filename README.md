@@ -1,37 +1,74 @@
+Here's a polished and improved version of your README file with better formatting, consistent style, and enhancements for readability and professionalism:
 
-# Image Classification for a City Dog Show
+---
 
-This is an image classifier created as part of my AWS AI Nanodegree program to classify dogs and non-dogs, and within that dog breeds. It is a command line program made up of various .py files which can be found in the *data* folder.
+# **Image Classification for a City Dog Show**
 
+This project is part of my **AWS AI Nanodegree Program**. It is a command-line image classifier that can:
 
-## Funcionalities
+1. Distinguish between dogs and non-dogs.
+2. Identify specific dog breeds.
 
-- Classification between dog and non-dog
-- Classification between breeds
-- Results gathered and analysis saved to file
-- Three models tested: alexnet, resnet and vgg
+The program uses several Python scripts located in the **`data`** folder.
 
-## How to use
+---
 
-Place the images you would like to categorize in the *data\uploaded_images* folder (you may delete my personal images that I used) then run one of the following three command lines (make sure you are in the *data* folder in your terminal!):
+## **Features**
 
-- `python check_images.py --dir data/uploaded_images/ --arch resnet  --dogfile dognames.txt > resnet_uploaded-images.txt`
-- `python check_images.py --dir data/uploaded_images/ --arch alexnet --dogfile dognames.txt > alexnet_uploaded-images.txt`
-- `python check_images.py --dir data/uploaded_images/ --arch vgg  --dogfile dognames.txt > vgg_uploaded-images.txt`
+- **Dog vs. Non-Dog Classification:** Distinguishes if the image is of a dog or not.
+- **Dog Breed Classification:** Identifies specific dog breeds for images classified as dogs.
+- **Results Output:** Saves analysis and results to files for review.
+- **Model Comparisons:** Tests three pretrained models: **AlexNet**, **ResNet**, and **VGG**.
 
-  The results will then be found in one of the corresponding files:
-  
-- `data\alexnet_pet-images.txt`
-- `data\resnet_pet-images.txt`
-- `data\vgg_pet-images.txt`
+---
 
-*NOTE*
+## **How to Use**
 
-You may wish to delete the content of these files before running the command lines as they currently include my results!
+1. Place the images you want to classify in the **`data/uploaded_images`** folder.  
+   _(You may delete my personal sample images contained in the folder.)_
 
+2. Run one of the following commands to classify the images.  
+   _(Ensure your terminal is in the **`data`** folder before executing the commands.)_
 
-## References
+   - **For ResNet:**
+     ```bash
+     python check_images.py --dir uploaded_images/ --arch resnet --dogfile dognames.txt > resnet_uploaded-images.txt
+     ```
+   - **For AlexNet:**
+     ```bash
+     python check_images.py --dir uploaded_images/ --arch alexnet --dogfile dognames.txt > alexnet_uploaded-images.txt
+     ```
+   - **For VGG:**
+     ```bash
+     python check_images.py --dir uploaded_images/ --arch vgg --dogfile dognames.txt > vgg_uploaded-images.txt
+     ```
 
- - [Udacity](https://www.udacity.com/)
- - [AWS AI Programming with Python](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089?promo=year_end&coupon=JULY4&utm_source=gsem_generic&utm_medium=ads_r&utm_campaign=20960322867_c_individuals&utm_term=161066723234&utm_keyword=ai%20programming%20with%20python_p&utm_source=gsem_generic&utm_medium=ads_n&utm_campaign=20960322867_c_individuals&utm_term=161066723234&utm_keyword=ai%20programming%20with%20python_p&gad_source=1&gclid=Cj0KCQjws560BhCuARIsAHMqE0HmBa3LOKQFIsLuPBAjJbFwJJwitNIZPeFQAIL43xoceke-JQbZ7L4aAlrBEALw_wcB)
+3. **Results Output:**  
+   The results will be saved in one of the following files depending on the model used:
 
+   - **`data/alexnet_pet-images.txt`**
+   - **`data/resnet_pet-images.txt`**
+   - **`data/vgg_pet-images.txt`**
+
+   **Tip:** You may want to delete the content of these files before running the program, as they currently contain sample results.
+
+4. **Optional:**  
+   Use the `run_model_batch.bat` file to test all three models simultaneously on a Windows machine or the `run_model_batch.sh` file if you are running a Linux based OS.
+
+---
+
+## **Notes**
+
+- Ensure Python is installed and set up correctly in your environment.  
+- This project requires some libraries like `torch` and `PIL`. Refer to the **Udacity Nanodegree documentation** for the required dependencies.
+
+---
+
+## **References**
+
+- **[Udacity](https://www.udacity.com/)**
+- **[AWS AI Programming with Python Nanodegree](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089)**
+
+---
+
+This improved version includes proper Markdown elements like **bold text**, consistent formatting, and a more professional tone. It ensures readability and aligns with best practices for creating clear and engaging documentation.
