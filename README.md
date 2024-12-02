@@ -66,5 +66,3 @@ The program uses several Python scripts located in the **`data`** folder.
 - **[AWS AI Programming with Python Nanodegree](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089)**
 
 ---
-
-This improved version includes proper Markdown elements like **bold text**, consistent formatting, and a more professional tone. It ensures readability and aligns with best practices for creating clear and engaging documentation.
